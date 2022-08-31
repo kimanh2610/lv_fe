@@ -1,0 +1,17 @@
+.title_footer {
+    p {
+        color: rgba(0, 0, 0, 0.6);
+    }
+}
+
+.logo_footer {
+    text-align     : center;
+    justify-content: center;
+    width          : 100%;
+    padding-top    : 10px;
+
+    .img_footer {
+        width : 100px;
+        height: 100px;
+    }
+}

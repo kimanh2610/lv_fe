@@ -4,12 +4,14 @@ import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import Link from '@mui/material/Link'
 import Grid from '@mui/material/Grid'
+import './footer.style.scss'
+
 function Copyright() {
 	return (
 		<Typography variant="body2" color="text.secondary" align="center">
 			{'Copyright © '}
 			<Link color="inherit" href="https://mui.com/">
-				Your Website
+				LearnCode - Củng Cố Ngôn Ngữ Lập Trình
 			</Link>{' '}
 			{new Date().getFullYear()}
 			{'.'}
@@ -47,7 +49,15 @@ export default function Footer(props) {
 						>
 							{description}
 						</Typography>
+						<div className="title_footer">
+							<p>
+								<b>LEARNCODE</b> được tối ưu hóa cho việc học và đào tạo. Ví dụ có thể được đơn giản hóa để cải thiện việc đọc và học tập. Hướng dẫn, tài liệu tham khảo và ví dụ được xem xét liên tục để tránh lỗi, nhưng chúng tôi không thể đảm bảo tính chính xác đầy đủ của tất cả các nội dung.
+							</p>
+						</div>
 						<Copyright />
+						<div className="logo_footer">
+							<img className="img_footer" src="../../images/logo.jpg" ></img>
+						</div>
 					</Grid>
 				</Container>
 			</Box>
