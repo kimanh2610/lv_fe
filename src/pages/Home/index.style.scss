@@ -132,29 +132,29 @@
             }
         }
 
+        //HTML
         .html_bg {
             background-color: #D9EEE1 !important;
             color           : black !important;
-    
         }
 
-        .sidebar_content_html {
+        .home_sidebar_content {
             padding-top     : 32px;
             padding-bottom  : 32px;
             width           : 100%;
             background-color: #D9EEE1 !important;
-            
 
-            .html_content {
+
+            .home_content_lg {
                 margin-left : auto;
                 margin-right: auto;
                 width       : 100%;
-                height      : 100vh;
+                height      : 80vh;
 
-                .html_content_l {
+                .home_content_lg_l {
                     float: left;
 
-                    .html_title {
+                    .languages_title {
                         font-size  : 70px;
                         font-weight: 700;
                         margin-top : -18px !important;
@@ -164,30 +164,37 @@
                         margin: 2px 0 -20px 0 !important;
                     }
 
-                    .btn_html {
-                        font-size        : 18px;
-                        margin           : auto;
-                        display          : block;
-                        width            : 200px;
-                        border-radius    : 25px;
-                        border           : none;
-                        padding          : 8px 16px;
-                        // vertical-align: middle;
-                        overflow         : hidden;
-                        text-align       : center;
-                        cursor           : pointer;
-                        //white-space   : nowrap;
-                        font-weight      : 500;
+                    .btn_lg {
+                        font-size    : 18px;
+                        margin       : auto;
+                        display      : block;
+                        width        : 200px;
+                        border-radius: 25px;
+                        border       : none;
+                        padding      : 8px 16px;
+                        overflow     : hidden;
+                        text-align   : center;
+                        cursor       : pointer;
+                        font-weight  : 500;
                     }
 
-                    .cl_learn_html {
+                    .cl_learn_lg {
                         background-color: #1473E6;
                         color           : white;
+
+                        &:hover {
+                            background-color: #0968dd;
+                        }
                     }
 
                     .cl_reference {
-                        background-color: #fff080;
+                        background-color: #fff4a3;
                         color           : #000;
+
+                        &:hover {
+                            background-color: #fff080;
+
+                        }
                     }
 
                     a {
@@ -196,12 +203,12 @@
 
                 }
 
-                .html_l_col {
+                .languages_l_col {
                     width     : 43.99999%;
                     text-align: center !important;
                 }
 
-                .html_content_r {
+                .home_content_lg_r {
 
                     float: right;
 
@@ -222,6 +229,25 @@
                             padding         : 8px 12px;
                             word-wrap       : break-word;
                         }
+
+                        .btn_try {
+                            background-color: #1473E6;
+                            color           : white;
+                            font-size       : 18px;
+                            text-decoration : none;
+                            display         : block;
+                            width           : 200px;
+                            border-radius   : 25px;
+                            border          : none;
+                            padding         : 8px 16px;
+                            overflow        : hidden;
+                            text-align      : center;
+                            cursor          : pointer;
+
+                            &:hover {
+                                background-color: #0968dd;
+                            }
+                        }
                     }
                 }
 
@@ -234,5 +260,34 @@
 
         }
 
+        //CSS
+        .css_bg {
+            background-color: #FFF4A3 !important;
+            color           : #000 !important;
+        }
+
+        .css_reference {
+            background-color: #282A35;
+            color           : #fff;
+
+            &:hover {
+                background-color: #000;
+            }
+        }
+
+
+        //JAVASCRIPT
+        .jscr_bg {
+            background-color: #282A35 !important;
+            color           : white !important;
+        }
+        .jscr_reference{
+            background-color: #fff;
+            color: #000;
+
+            &:hover{
+                background-color: #e7e9eb;
+            }
+        }
     }
 }
