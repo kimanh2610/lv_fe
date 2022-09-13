@@ -24,7 +24,7 @@ export default function Footer(props) {
 
 	return (
 		<div>
-			<div style={{ paddingTop: '200px' }}></div>
+			<div style={{ paddingTop: '50px' }}></div>
 			<Box component="footer" sx={{
 				bgcolor: 'background.paper',
 				py: 4,
