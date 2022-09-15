@@ -1,23 +1,26 @@
-import { Route, Routes } from "react-router-dom";
-import Footer from "./components/Footer/footer.component";
-import Header from "./components/Header/header.component";
-import route from "./Router";
+import { useEffect } from "react";
+import { Route, Routes, useNavigate } from "react-router-dom";
+import Client from "./layout/client";
+import Admin from "./layout/admin";
 
 
 function App() {
 
-	let menu = route.map((item, idx) => {
-		return <Route key={idx} path={item.path} element={item.component} />
-	})
+	const navigate = useNavigate()
 
+	// useEffect(()=> {
+	// 	navigate('/client')
+	// })
 
   return (
     <div className="App">
-		<Header/>
-			<Routes>
-				{menu}
-			</Routes>
-		<Footer/>
+		<button onClick={()=>{navigate('/admin')}} style={{position: 'relative', zIndex: 100000}}>Admin</button>
+		<button onClick={()=>{navigate('/client')}} style={{position: 'relative', zIndex: 100000}}>Client</button>
+		<Routes>
+			<Route path="/client" element={<Client></Client>}></Route>
+			<Route path="/admin" element={<Admin></Admin>}></Route>
+		</Routes>
+
 
     </div>
   );
