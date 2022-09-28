@@ -1,0 +1,74 @@
+.title_user {
+    padding-bottom: 10px;
+
+    .content_tittle_user {
+        color      : #888;
+        font-weight: 600;
+    }
+}
+
+.nav_user {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    padding-bottom : 10px;
+
+    .add_user {
+        height         : 40px;
+        align-items    : center;
+        display        : flex;
+        justify-content: center;
+
+        .btn_add_user {
+            border          : none;
+            border-radius   : 5px;
+            background-color: #1976d2;
+            height          : 100%;
+            padding         : 0 16px 0 8px;
+            color           : #fff;
+            padding-left    : 10px;
+            font-size       : 16px;
+
+            :hover {
+                cursor: pointer;
+                
+            }
+
+            .add_user_icon {
+                width     : 20px;
+                height    : 20px;
+                font-size : 16px;
+                text-align: center;
+
+            }
+
+        }
+    }
+
+
+    .search {
+        border         : 2px solid #e8e8e8;
+        border-radius  : 20px;
+        height         : 40px;
+        padding        : 0 16px 0 8px;
+        width          : 250px;
+        align-items    : center;
+        display        : flex;
+        justify-content: center;
+
+        .search_icon {
+            width      : 30px;
+            height     : 32px;
+            opacity    : .7;
+            padding-top: 6px;
+        }
+
+        .search_input {
+            border     : none;
+            caret-color: #444;
+            height     : 100%;
+            outline    : none;
+            padding    : 0 4px;
+        }
+    }
+}

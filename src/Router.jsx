@@ -1,9 +1,11 @@
 import CourseManager from './pages/Admin/CourseManager'
+import BlogManager from './pages/Admin/BlogManager'
 import UserManager from './pages/Admin/UserManager'
 import Home from './pages/Home'
 import Login from './pages/Login'
 
 import NotFound from './pages/_404'
+import CertificateManager from './pages/Admin/CertificateManager'
 
 
 const route = [
@@ -13,6 +15,10 @@ const route = [
 
     { path: '/quanly/nguoidung', exact: true, name: 'UserManager', component: <UserManager /> },
     { path: '/quanly/khoahoc', exact: true, name: 'CourseManager', component: <CourseManager /> },
+    { path: '/quanly/blog', exact: true, name: 'BlogManager', component: <BlogManager /> },
+    { path: '/quanly/chungnhanhoc', exact: true, name: 'CertificateManager', component: <CertificateManager /> },
+
+
     { path: '/*', exact: true, name: 'Custom404', component: <NotFound/>},
 ]
 

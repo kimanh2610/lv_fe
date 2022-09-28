@@ -18,7 +18,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { Link } from 'react-router-dom';
 import { menuDashboard } from '../../data/menu';
-
+import WidgetsIcon from '@mui/icons-material/Widgets';
 import './index.style.scss'
 
 
@@ -93,8 +93,11 @@ export default function Sidebar({ children }) {
                         onClick={handleDrawerOpen}
                         edge="start"
                         sx={{ mr: 2, ...(isOpen && { display: 'none' }) }}
+
                     >
+
                         <MenuIcon />
+
                     </IconButton>
                     <Typography variant="h6" noWrap component="div">
                         LEARN CODE
@@ -102,6 +105,7 @@ export default function Sidebar({ children }) {
                 </Toolbar>
             </AppBar>
             <Drawer
+
                 sx={{
                     width: drawerWidth,
                     flexShrink: 0,
@@ -115,6 +119,8 @@ export default function Sidebar({ children }) {
                 open={isOpen}
             >
                 <DrawerHeader>
+                    <img className='logo_img' src='/images/logo.jpg' />
+
                     <IconButton onClick={handleDrawerClose}>
                         {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
                     </IconButton>
@@ -123,10 +129,10 @@ export default function Sidebar({ children }) {
                 <List>
                     {menuDashboard.map((text, index) => (
                         <Link className='sidebar_menu' to={text.to}>
-                            <ListItem key={index} disablePadding>
+                            <ListItem className='title_items' key={index} disablePadding>
                                 <ListItemButton>
-                                    <ListItemIcon>
-                                        {/* {index % 2 === 0 ? <InboxIcon /> : <MailIcon />} */}
+                                    <ListItemIcon sx={{ paddingLeft: '10px' }}>
+                                        <i className={text.icon}> </i>
                                     </ListItemIcon>
                                     <ListItemText primary={text.title} />
                                 </ListItemButton>
