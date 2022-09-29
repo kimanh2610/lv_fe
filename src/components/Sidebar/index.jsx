@@ -6,19 +6,29 @@ import CssBaseline from '@mui/material/CssBaseline';
 import MuiAppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
 import { Link } from 'react-router-dom';
 import { menuDashboard } from '../../data/menu';
-import WidgetsIcon from '@mui/icons-material/Widgets';
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
+import Badge from '@mui/material/Badge';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import PersonIcon from '@mui/icons-material/Person';
+import LogoutIcon from '@mui/icons-material/Logout';
+import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
+
 import './index.style.scss'
 
 
@@ -49,6 +59,7 @@ const AppBar = styled(MuiAppBar, {
     transition: theme.transitions.create(['margin', 'width'], {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
+
     }),
     ...(open && {
         width: `calc(100% - ${drawerWidth}px)`,
@@ -58,7 +69,10 @@ const AppBar = styled(MuiAppBar, {
             duration: theme.transitions.duration.enteringScreen,
         }),
     }),
-}));
+
+}
+
+));
 
 const DrawerHeader = styled('div')(({ theme }) => ({
     display: 'flex',
@@ -69,10 +83,12 @@ const DrawerHeader = styled('div')(({ theme }) => ({
     justifyContent: 'flex-end',
 }));
 
+
+
 export default function Sidebar({ children }) {
     const theme = useTheme();
     //   const isOpen = useSelector(sidebarSelector)
-    const [isOpen, setIsOpen] = React.useState(false)
+    const [isOpen, setIsOpen] = React.useState(true)
 
     const handleDrawerOpen = () => {
         setIsOpen(true)
@@ -82,11 +98,21 @@ export default function Sidebar({ children }) {
         setIsOpen(false)
     };
 
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
             <AppBar position="fixed" open={isOpen}>
-                <Toolbar>
+
+                <Toolbar className="header_nav">
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
@@ -95,14 +121,49 @@ export default function Sidebar({ children }) {
                         sx={{ mr: 2, ...(isOpen && { display: 'none' }) }}
 
                     >
-
                         <MenuIcon />
-
                     </IconButton>
                     <Typography variant="h6" noWrap component="div">
                         LEARN CODE
                     </Typography>
+                    <div className="header_icon">
+                        <Badge badgeContent={4} color="warning">
+                            <NotificationsIcon />
+                        </Badge>
+                        <div className="user_profile">
+                            <Button
+                                id="basic-button"
+                                aria-controls={open ? 'basic-menu' : undefined}
+                                aria-haspopup="true"
+                                aria-expanded={open ? 'true' : undefined}
+                                onClick={handleClick}
+                            >
+                                <PersonIcon className="btn_icon_user" />
+                            </Button>
+                            <Menu
+                                id="basic-menu"
+                                anchorEl={anchorEl}
+                                open={open}
+                                onClose={handleClose}
+                                MenuListProps={{
+                                    'aria-labelledby': 'basic-button',
+                                }}
+                            >
+                                <MenuItem onClick={handleClose}>
+                                    <ManageAccountsIcon />Tài khoản của tôi
+                                </MenuItem>
+                                <MenuItem onClick={handleClose}>
+                                    <LogoutIcon /> Đăng xuất
+                                </MenuItem>
+                            </Menu>
+                        </div>
+
+                        <Stack direction="row" spacing={2} >
+                            <Avatar className="avatar" alt="Remy Sharp" src="/images/avatar.jpg" />
+                        </Stack>
+                    </div>
                 </Toolbar>
+
             </AppBar>
             <Drawer
 
@@ -120,7 +181,6 @@ export default function Sidebar({ children }) {
             >
                 <DrawerHeader>
                     <img className='logo_img' src='/images/logo.jpg' />
-
                     <IconButton onClick={handleDrawerClose}>
                         {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
                     </IconButton>

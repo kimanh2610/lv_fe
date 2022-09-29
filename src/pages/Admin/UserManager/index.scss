@@ -13,38 +13,22 @@
     justify-content: space-between;
     padding-bottom : 10px;
 
-    .add_user {
-        height         : 40px;
-        align-items    : center;
-        display        : flex;
-        justify-content: center;
-
-        .btn_add_user {
-            border          : none;
-            border-radius   : 5px;
-            background-color: #1976d2;
-            height          : 100%;
-            padding         : 0 16px 0 8px;
-            color           : #fff;
-            padding-left    : 10px;
-            font-size       : 16px;
-
-            :hover {
-                cursor: pointer;
-                
-            }
-
-            .add_user_icon {
-                width     : 20px;
-                height    : 20px;
-                font-size : 16px;
-                text-align: center;
-
-            }
-
-        }
+    .btn_add_user {
+        color           : #fff !important;
+        background-color: #1976d2;
     }
 
+    :hover {
+        color: #1976d2 !important;
+    }
+
+    .add_user_icon {
+        width       : 20px;
+        height      : 20px;
+        font-size   : 16px;
+        margin-right: 10px;
+
+    }
 
     .search {
         border         : 2px solid #e8e8e8;
@@ -64,11 +48,14 @@
         }
 
         .search_input {
-            border     : none;
-            caret-color: #444;
-            height     : 100%;
-            outline    : none;
-            padding    : 0 4px;
+            border        : none;
+            // caret-color: #444;
+            height        : 100%;
+            outline       : none;
+            padding       : 0 4px;
         }
     }
 }
+
+
+//FORM

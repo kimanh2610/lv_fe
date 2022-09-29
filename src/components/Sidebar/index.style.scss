@@ -1,15 +1,45 @@
-.sidebar_menu{
-    text-decoration: none;
-    color: #000;
+.header_nav {
+    display         : flex;
+    justify-content : space-between;
+    background-color: #1976d2 !important;
+    color           : #fff !important;
 
-    .title_items{
-        border-bottom: 1px solid #ccc;
-      
+    .header_icon {
+        display        : flex;
+        text-align     : center;
+        justify-content: center;
+
+        .user_profile {
+            margin-top: -5px !important;
+            color     : #fff;
+
+            .btn_icon_user {
+                margin-left: 20px !important;
+                color      : #fff !important;
+
+            }
+        }
+
+
+        .avatar {
+            margin-left: 10px;
+            margin-top : -10px;
+        }
     }
 }
 
-.logo_img{
-    
-    width: 60px;
-    height: 50px;
+.sidebar_menu {
+    text-decoration: none;
+    color          : #000;
+
+    .title_items {
+        border-bottom: 1px solid #ccc;
+
+    }
+}
+
+.logo_img {
+    margin-right: 120px;
+    width       : 60px;
+    height      : 50px;
 }
