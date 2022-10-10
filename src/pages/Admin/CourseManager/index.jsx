@@ -12,7 +12,7 @@ import './index.scss';
 export default function CourseManager() {
   return (
     <Sidebar >
-      <div className='title_course'>
+      <div className='title_courses'>
         <span className='content_tittle_course'>KHÓA HỌC</span>
       </div>
     </Sidebar>
