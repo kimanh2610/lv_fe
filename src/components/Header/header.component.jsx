@@ -24,7 +24,7 @@ function Header() {
             </div>
             <div className="login_header navbar_flex">
                 <div>
-                    <a className="login_btn" href="#">Đăng nhập</a>
+                    <a className="login_btn" href="/login">Đăng nhập</a>
                 </div>
             </div>
         </div>

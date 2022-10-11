@@ -1,21 +1,22 @@
 .wrapper {
-    --height        : 88px;
-    --color_header  : #1473e6;
-    width           : 100%;
-    height          : var(--height);
-    position        : fixed;
-    top             : 0;
-    right           : 0;
-    left            : 0;
-    z-index         : 20;
-    padding         : 0 28px;
-    align-items     : center;
-    background-color: #fff;
-    border-bottom   : 1px solid #e8ebed;
-    display         : flex;
+    --height           : 88px;
+    --color_header     : #1473e6;
+    width              : 100%;
+    height             : var(--height);
+    // position        : fixed;
+    position           : sticky;
+    top                : 0;
+    right              : 0;
+    left               : 0;
+    z-index            : 20;
+    padding            : 0 28px;
+    align-items        : center;
+    background-color   : #fff;
+    border-bottom      : 1px solid #e8ebed;
+    display            : flex;
 
-    .navbar_flex{
-        flex       : 1 1;
+    .navbar_flex {
+        flex: 1 1;
     }
 
     .logo_header {
@@ -55,10 +56,10 @@
     }
 
     .search_header {
-        align-items    : center;
-        display        : flex;
-        justify-content: center;
-        margin-top     : -12px;
+        align-items       : center;
+        display           : flex;
+        justify-content   : center;
+        margin-top        : -12px;
         // flex           : 1 1;
 
         .wrapper_search {

@@ -7,12 +7,14 @@ import Login from './pages/Login'
 import NotFound from './pages/_404'
 import CertificateManager from './pages/Admin/CertificateManager'
 import Course from './pages/Home/Course'
+import Lesson from './pages/Home/Lesson'
 
 
 const route = [
     { path: '/', exact: true, name: 'Home', component: <Home /> },
     { path: '/login', exact: true, name: 'Login', component: <Login /> },
     { path: '/khoahoc', exact: true, name: 'Course', component: <Course /> },
+    { path: '/khoahoc/baihochtml', exact: true, name: 'Lesson', component: <Lesson /> },
 
 
     { path: '/quanly/nguoidung', exact: true, name: 'UserManager', component: <UserManager /> },
