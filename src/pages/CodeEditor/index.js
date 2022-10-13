@@ -2,8 +2,6 @@ const left = document.querySelector(".left"),
     right = document.querySelector(".right"),
     bar = document.querySelector(".bar"),
     editor = document.querySelector(".editor"),
-    run = document.querySelector(".btn_run"),
-    iframe = document.querySelector(".iframe"),
     darkMode = document.querySelector(".btn_dark"),
     lightMode = document.querySelector(".btn_light");
 
@@ -23,31 +21,36 @@ bar.addEventListener("mouseup", () => {
     document.removeEventListener("mousemove", drag);
 })
 
-//Run code
-run.addEventListener("click", () => {
-    const html = editor.textContent;
-    iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
-
-})
-
 //Set Dark Mode
 darkMode.addEventListener("click", () => {
-    editor.style.backgroundColor = "#363836";
-    editor.style.color = "#eee";
+    document.getElementById("code").style.backgroundColor = "#363836";
+    document.getElementById("code").style.color = "#eee";
 })
 
 //Set Light Mode
 lightMode.addEventListener("click", () => {
-    editor.style.backgroundColor = "";
-    editor.style.color = "";
+    document.getElementById("code").style.backgroundColor = "";
+    document.getElementById("code").style.color = "";
 })
 
-//live code 
-document.getElementById("live").onclick = function () {
-    if (this.checked) {
-        editor.addEventListener("keyup", () => {
-            const html = editor.textContent;
-            iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
-        })
-    }
-}
+
+$(document).ready(function () {
+    var e = ace.edit("code");
+    e.getSession().setMode("ace/mode/html");
+    e.setTheme("ace/theme/xcode");
+    e.setValue(`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        
+</body>
+</html>`);
+
+    $("#btn").on("click", function () {
+        $("#output").html(e.getValue());
+    });
+});

@@ -13,6 +13,49 @@ html {
     height: 100%;
 }
 
+.backhome {
+    padding-top: 60px;
+    font-size  : 1.4rem;
+}
+
+.btn_home {
+    text-decoration: none;
+    float          : left;
+    background     : #E7E9EB;
+    padding        : 3px 10px 3px 20px;
+    position       : relative;
+    margin         : 0 5px 0 0;
+    text-decoration: none;
+    color          : #555;
+}
+
+/* .btn_home::before {
+    content      : "";
+    border-top   : 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left  : 12px solid #fff;
+    position     : absolute;
+    left         : 0;
+    top          : 0;
+} */
+
+
+.btn_home::after {
+    content      : "";
+    border-top   : 14px solid transparent;
+    border-bottom: 13px solid transparent;
+    border-left  : 13px solid #E7E9EB;
+    position     : absolute;
+    right        : -13px;
+    top          : 0;
+    z-index      : 1;
+}
+
+.btn_home:hover {
+    background-color: #04AA6D;
+    color           : #fff
+}
+
 .editor_menu {
     width           : 100%;
     height          : 4rem;
@@ -27,20 +70,20 @@ html {
     padding-right: 5px;
 }
 
-.btn {
+.btn_c {
     border          : none;
     outline         : none;
     cursor          : pointer;
     background-color: #04AA6D;
     color           : #fff;
-    padding         : 8px 5px;
+    padding         : 5px 5px;
     border-radius   : 3px;
     font-size       : 1.4rem;
     margin-right    : 8px;
 }
 
-.btn:hover {
-    background-color: #049962;
+.btn_c:hover {
+    background-color: #049962 !important;
 }
 
 .live {
@@ -54,18 +97,6 @@ html {
     cursor       : pointer;
 }
 
-.container {
-    position        : absolute;
-    bottom          : 0;
-    top             : 1rem;
-    width           : 100%;
-    display         : flex;
-    height          : auto;
-    margin-top      : 120px;
-    background-color: #e7e9eb;
-
-}
-
 .left {
     height          : 100%;
     width           : 50%;
@@ -75,18 +106,25 @@ html {
 }
 
 .bar {
-    width           : 5px;
-    height          : 100%;
-    background-color: #e7e9eb;
-    cursor          : w-resize;
+    width              : 5px;
+    /* height          : 100%; */
+    background-color   : #e7e9eb;
+    cursor             : w-resize;
 }
 
 .right {
     flex        : 1;
     margin-right: 10px;
+
 }
 
-.editor {
+.btn_home:hover::after{
+    border-left-color: #04AA6D;
+    color: #fff;
+}
+
+#code {
+    min-height  : 450px;
     width       : 100%;
     height      : 100%;
     font-size   : 1.4rem;
@@ -95,14 +133,15 @@ html {
     border-color: #ccc;
 }
 
-.iframe {
+#output {
+    min-height      : 450px;
     width           : 100%;
     height          : 100%;
     background-color: #fff;
     overflow-y      : auto;
-    white-space     : pre;
     right           : 0;
     padding         : 4px;
     border          : 1px solid #ccc;
+
 
 }
