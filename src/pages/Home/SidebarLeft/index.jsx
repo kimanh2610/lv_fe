@@ -28,7 +28,7 @@ export default function SidebarLeft() {
                         </a>
                     </li>
                     <li>
-                        <a className="sidebar_items">
+                        <a className="sidebar_items" href="/khoahoc">
                             <LibraryBooksIcon />
                             <span>Khóa Học</span>
                         </a>

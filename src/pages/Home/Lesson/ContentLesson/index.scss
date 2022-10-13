@@ -1,0 +1,74 @@
+.content_lesson_wrapper {
+    width           : calc(100% - 320px);
+    color           : #000 !important;
+    background-color: #f1f1f1 !important;
+}
+
+.ct_less_nav {
+    color           : #000 !important;
+    background-color: #fff !important;
+
+    &::before {
+        content: "";
+        display: table;
+        clear  : both;
+    }
+}
+
+.ct_less_nav_content {
+    padding     : 16px 32px 32px 32px;
+    border-right: 1px solid #f1f1f1
+}
+
+.leaderboard {
+    text-align  : center;
+    margin-left : -16px;
+    margin-right: -16px;
+}
+
+h1 {
+    font-size  : 41px;
+    font-weight: 400;
+}
+
+.btn_nextprev {
+
+    &::before,
+    &::after {
+        content: "";
+        display: table;
+        clear  : both;
+    }
+
+    .btn_prev {
+        float           : left !important;
+    }
+    .btn_next {
+        float           : right !important;
+    }
+
+    a {
+        font-size    : 18px;
+        font-family  : 'Source Sans Pro', sans-serif;
+        padding-left : 19px;
+        padding-right: 19px;
+        border       : 1px solid #cccccc;
+        border-radius: 5px;
+        background-color: #04AA6D;
+        color           : #ffffff !important;
+        border-color    : #04AA6D;
+
+    }
+
+    .lc_btn {
+        display        : inline-block;
+        padding        : 8px 16px;
+        vertical-align : middle;
+        overflow       : hidden;
+        text-decoration: none;
+        color          : inherit;
+        text-align     : center;
+        cursor         : pointer;
+        white-space    : nowrap;
+    }
+}

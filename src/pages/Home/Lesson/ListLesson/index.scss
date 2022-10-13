@@ -1,0 +1,50 @@
+.list_lesson_wrapper {
+    height          : 100%;
+    width           : 200px;
+    background-color: #E7E9EB;
+    position        : fixed !important;
+    z-index         : 1;
+    right           : 0;
+}
+
+.list_menu_right {
+    position        : fixed;
+    top             : 0;
+    padding-top     : 89px;
+    padding-bottom  : 40px;
+    height          : 100%;
+    width           : 200px;
+    background-color: transparent;
+}
+
+.list_menu {
+    height          : 100%;
+    width           : 100%;
+    background-color: #E7E9EB;
+    padding-top     : 20px;
+}
+
+.title_list_course {
+    font-size: 21px;
+    padding  : 10px 0 4px 16px;
+    margin   : -5px 0 4px 0;
+    width    : 200px;
+}
+
+#sidenav a.active {
+    background-color: #1473e6 !important;
+    color           : #ffffff !important;
+}
+
+a:hover {
+    cursor          : pointer;
+    background-color: #d5d6d8;
+}
+
+#sidenav a {
+    font-family    : "Segoe UI", Arial, sans-serif;
+    text-decoration: none;
+    display        : block;
+    padding        : 2px 1px 2px 16px;
+    color          : #292929;
+}

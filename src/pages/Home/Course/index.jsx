@@ -28,10 +28,10 @@ export default function Course() {
                 <div className="modal_row">
                   <div className="modal_col">
                     <div className="course_body_items">
-                      <a href="#" className="course_item_img" style={{ backgroundImage: `url("/images/course/html.jpg")` }}>
+                      <a href="/khoahoc/baihochtml" className="course_item_img" style={{ backgroundImage: `url("/images/course/html.jpg")` }}>
                       </a>
                       <h3 className='title_items'>
-                        <a href="#">HTML từ Zero đến Hero</a>
+                        <a href="/khoahoc/baihochtml">HTML từ Zero đến Hero</a>
                       </h3>
                     </div>
                   </div>

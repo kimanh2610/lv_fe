@@ -1,0 +1,108 @@
+* {
+    padding   : 0;
+    margin    : 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.wrapper {
+    width : 100%;
+    height: 100%;
+}
+
+.editor_menu {
+    width           : 100%;
+    height          : 4rem;
+    background-color: #e7e9eb;
+    display         : flex;
+    padding         : 5px 0 5px 10px;
+    justify-content : flex-start;
+    text-align      : center;
+}
+
+.icon {
+    padding-right: 5px;
+}
+
+.btn {
+    border          : none;
+    outline         : none;
+    cursor          : pointer;
+    background-color: #04AA6D;
+    color           : #fff;
+    padding         : 8px 5px;
+    border-radius   : 3px;
+    font-size       : 1.4rem;
+    margin-right    : 8px;
+}
+
+.btn:hover {
+    background-color: #049962;
+}
+
+.live {
+    font-size    : 1.4rem;
+    font-weight  : bold;
+    border       : 1px solid #049962;
+    padding      : 5px 5px 4px 5px;
+    display      : flex;
+    align-items  : center;
+    border-radius: 3px;
+    cursor       : pointer;
+}
+
+.container {
+    position        : absolute;
+    bottom          : 0;
+    top             : 1rem;
+    width           : 100%;
+    display         : flex;
+    height          : auto;
+    margin-top      : 120px;
+    background-color: #e7e9eb;
+
+}
+
+.left {
+    height          : 100%;
+    width           : 50%;
+    border          : 1px solid #d5d5d5;
+    background-color: #fff;
+    margin-left     : 10px;
+}
+
+.bar {
+    width           : 5px;
+    height          : 100%;
+    background-color: #e7e9eb;
+    cursor          : w-resize;
+}
+
+.right {
+    flex        : 1;
+    margin-right: 10px;
+}
+
+.editor {
+    width       : 100%;
+    height      : 100%;
+    font-size   : 1.4rem;
+    outline     : none;
+    padding     : 1rem 0 0 1rem;
+    border-color: #ccc;
+}
+
+.iframe {
+    width           : 100%;
+    height          : 100%;
+    background-color: #fff;
+    overflow-y      : auto;
+    white-space     : pre;
+    right           : 0;
+    padding         : 4px;
+    border          : 1px solid #ccc;
+
+}
