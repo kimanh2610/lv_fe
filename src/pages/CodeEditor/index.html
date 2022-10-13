@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0f58355114.js" crossorigin="anonymous"></script>
+    <title>LearnCode Code Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div style="height: 90px;">
+
+        </div>
+        <div class="editor_menu">
+            <button class="btn btn_dark"><i class="fas fa-moon icon"></i>Chế độ tối</button>
+            <button class="btn btn_light"><i class="fas fa-sun icon"></i>Chế độ sáng</button>
+            <button class="btn btn_run"><i class="fas fa-play icon"></i>Chạy</button>
+    
+            <div class="live">
+                <label for="">Live</label>
+                <input type="checkbox" id="live" style="margin-left: 5px;"/>
+            </div>
+        </div>
+        <div class="container">
+            <div class="left">
+                <div class="editor" contenteditable="">
+                    Nhập code tại đây ...
+                </div>
+            </div>
+            <div class="bar" title="Click and drag"></div>
+            <div class="right">
+                <iframe src="" frameborder="0" class="iframe">
+    
+                </iframe>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

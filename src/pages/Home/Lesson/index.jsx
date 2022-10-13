@@ -1,5 +1,4 @@
 import React from 'react'
-import Layout from '../../../layout/client'
 import SidebarLeft from '../SidebarLeft'
 import ListLesson from './ListLesson'
 import './index.scss'
